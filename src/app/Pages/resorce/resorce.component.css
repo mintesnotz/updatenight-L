@@ -1,0 +1,47 @@
+
+.intro-section {
+  background-color: #f0f0f0; /* Set your desired background color */
+  padding: 40px; /* Set your desired padding */
+  text-align: center;
+  display: center;
+}
+
+.intro-section h1 {
+  color: #333; /* Set your desired text color */
+  font-size: 2rem; /* Set your desired font size */
+}
+
+.intro-section p {
+  color: #555; /* Set your desired text color */
+  font-size: 1rem; /* Set your desired font size */
+}
+.card-img-top {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-img-top img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-img-top:hover img {
+    transform: scale(1.1);
+  }
+  .custom-blog-heading {
+    font-family: 'Your Custom Font', sans-serif; /* Specify your custom font */
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    color: #333; /* Set your desired text color */
+    /* Add any other styles you want for the h2 element */
+  }
+  .display-5 {
+    font-weight: bold;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    
+  }
+  .display-5:hover {
+    color: #7907b2;
+  }
+  

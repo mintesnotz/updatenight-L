@@ -1,0 +1,24 @@
+<section class="about-container">
+    <h2>{{ companyName }}</h2>
+  
+    <!-- Company Info with small photo -->
+    <div class="company-info">
+      <div class="company-logo">
+        <img src="../../../assets/dog.jpg" alt="Company Logo">
+      </div>
+      <div class="company-description">
+        <p>{{ history }}</p>
+        <p>{{ mission }}</p>
+      </div>
+    </div>
+  
+    <h2>Our Leaders</h2>
+    <div class="team-members">
+      <div *ngFor="let member of team" class="team-member">
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.role }}</p>
+        <p>{{ member.bio }}</p>
+      </div>
+    </div>
+  </section>
+  

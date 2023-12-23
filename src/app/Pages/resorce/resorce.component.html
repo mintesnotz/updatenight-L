@@ -1,0 +1,77 @@
+<!-- blog.component.html -->
+
+<section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
+  <div class="container">
+      <div class="intro-section">
+          <h1>Online Resources</h1>
+      </div>
+  </div>
+
+  <div class="container overflow-hidden">
+      <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
+          <div class="col-12 col-lg-4" *ngFor="let post of blogPosts">
+              <article (mouseenter)="post.isHovered = true" (mouseleave)="post.isHovered = false">
+                  <div class="card border-0 bg-transparent">
+                      <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                          <a [routerLink]="['/menu', post.id]" routerLinkActive="active-link">
+                              <!-- Assuming post.id is a unique identifier for each blog post -->
+                              <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" [src]="post.image" alt="{{ post.title }}">
+                              <figcaption *ngIf="post.isHovered">
+                                  <!-- Medium Eye Icon -->
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-eye text-white bsb-hover-fadeInLeft"
+                                      viewBox="0 0 16 16">
+                                      <!-- Your medium eye icon paths here -->
+                                  </svg>
+                                  <!-- Read More Text -->
+                                  <h4 class="h6 text-white bsb-hover-fadeInRight mt-2">Read More</h4>
+                              </figcaption>
+                          </a>
+                      </figure>
+                      <div class="card-body m-0 p-0">
+                          <div class="entry-header mb-3">
+                              <ul class="entry-meta list-unstyled d-flex mb-3">
+                                  <li>
+                                      <a class="d-inline-flex px-2 py-1 link-primary text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-2
+                   text-decoration-none fs-7" [routerLink]="['/menu', post.id]" routerLinkActive="active-link">{{ post.category }}</a>
+                                      <!-- Assuming post.id is a unique identifier for each blog post -->
+                                  </li>
+                              </ul>
+                              <h2 class="card-title entry-title h4 m-0">
+                                  <a class="link-dark text-decoration-none" [routerLink]="['/menu', post.id]" routerLinkActive="active-link">{{ post.title }}</a>
+                                  <!-- Assuming post.id is a unique identifier for each blog post -->
+                              </h2>
+                          </div>
+                      </div>
+                      <div class="card-footer border-0 bg-transparent p-0 m-0">
+                          <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
+                              <li>
+                                  <a class="fs-7 link-secondary text-decoration-none d-flex align-items-center" [routerLink]="['/menu', post.id]"
+                                      routerLinkActive="active-link">
+                                      <svg style="color: blue" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book"
+                                          viewBox="0 0 16 16">
+                                          <!-- Your book icon paths here -->
+                                      </svg>
+                                      <span class="ms-2 fs-7">{{ post.date }}</span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <span class="px-3">&bull;</span>
+                              </li>
+                              <li>
+                                  <a class="link-secondary text-decoration-none d-flex align-items-center" [routerLink]="['/menu', post.id]"
+                                      routerLinkActive="active-link">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat-dots"
+                                          viewBox="0 0 16 16">
+                                          <!-- Your chat icon paths here -->
+                                      </svg>
+                                      <span class="ms-2 fs-7">{{ post.comments }}</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </article>
+          </div>
+      </div>
+  </div>
+</section>

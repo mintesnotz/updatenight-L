@@ -1,0 +1,34 @@
+<!-- articles.component.html -->
+<div class="page-container">
+  <!-- First Sidebar for Articles -->
+  <div class="sidebar">
+    <h2 class="sidebar-title">Articles</h2>
+    <ul>
+      <li *ngFor="let section of articleSections">
+        <a (click)="selectSection(section.title)" class="sidebar-link">{{ section.title }}</a>
+      </li>
+    </ul>
+  </div>
+
+ 
+
+  <!-- Main Article Container -->
+  <div class="article-container">
+    <h1 class="page-title">Understanding the Scriptures</h1>
+    <hr>
+
+    <div *ngIf="selectedContent" class="selected-section">
+      <h2 class="selected-section-title">{{ selectedSection }}</h2>
+      <p>{{ selectedContent }}</p>
+    </div>
+  </div>
+   <!-- Second Sidebar for Books -->
+   <div class="sidebar">
+    <h2 class="sidebar-title">Books</h2>
+    <ul>
+      <li *ngFor="let book of bookList">
+        <a (click)="selectBook(book.title)" class="sidebar-link">{{ book.title }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

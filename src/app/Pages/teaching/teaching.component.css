@@ -1,0 +1,104 @@
+/* teaching.component.css */
+
+.intro-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .intro-section h1 {
+    color: #333;
+  }
+  
+  .intro-section p {
+    color: #555;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .video-card,
+  .pdf-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-card h3,
+  .pdf-card h3 {
+    color: #007bff;
+  }
+  
+  .video-card p,
+  .pdf-card p {
+    color: #666;
+  }
+  
+  iframe {
+    max-width: 100%;
+  }
+  
+  .cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .video-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Update the .video-card styles to set the width */
+  .video-card {
+    width: calc(25% - 20px); /* Set the width for four cards in a row with some margin */
+    margin: 10px; /* Adjust the margin based on your preference */
+    box-sizing: border-box; /* Include padding and border in the box model */
+  }
+  
+  /* Add responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .video-card {
+      width: calc(50% - 20px); /* Set the width for two cards in a row on smaller screens */
+    }
+  }
+  .pdf-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .pdf-card {
+    flex: 1 0 calc(25% - 10px); /* 4 items in a row with margin */
+    margin-bottom: 10px;
+  }
+  
+  .pdf-card-next-row {
+    flex-basis: 10%;
+    padding: 20%;
+  }
+  /* teaching.component.css */
+.search-container {
+  margin-bottom: 20px;
+  padding-left: 40%;
+}
+
+input[type="text"] {
+  
+  width: 40%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Optional: Add styles for better visibility on focus */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+}

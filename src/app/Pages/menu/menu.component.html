@@ -1,0 +1,31 @@
+<!-- blog.component.html -->
+
+<section class="blog-details">
+  <div class="container" *ngIf="blogPosts && blogPosts.length > 0">
+    <div class="row">
+      <div class="col-12">
+        <div class="intro-section">
+          <h1>{{ introSectionTitle }}</h1>
+          <p>{{ introSectionDescription }}</p>
+        </div>
+        <div class="card blog-card">
+          <div class="card-body">
+            <div class="blog-details-content">
+              <img class="img-fluid" [src]="blogPosts[0].image" alt="{{ blogPosts[0].title }}">
+              <div class="details">
+                <h1>{{ blogPosts[0].title }}</h1>
+                <div class="meta">
+                  <span class="category">{{ blogPosts[0].category }}</span>
+                  <span class="date">{{ blogPosts[0].date }}</span>
+                  <span class="comments">{{ blogPosts[0].comments }} Comments</span>
+                </div>
+                <p>{{ blogPosts[0].content }}</p>
+                <!-- Add more details as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

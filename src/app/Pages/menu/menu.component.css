@@ -1,0 +1,61 @@
+/* detail-view.component.css */
+
+/* Style for the container */
+    .container {
+        padding: 0; /* Remove top padding */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Adjust as needed */
+      }
+  
+  /* Style for the card */
+  .blog-card {
+    border: 1px solid #dee2e6; /* Adjust border as needed */
+    border-radius: 10px;
+    width: 100%; /* Make the card take full width */
+    max-width: 600px; /* Set a maximum width for the card */
+  }
+  
+  /* Style for the blog details content */
+  .blog-details-content {
+    text-align: center;
+  }
+  
+  /* Style for the image */
+  .img-fluid {
+    border-radius: 10%;
+    margin-bottom: 20px;
+    max-width: 100%; /* Make the image responsive */
+  }
+  
+  /* Style for the details section */
+  .details {
+    margin-top: 20px;
+  }
+  
+  /* Style for the title */
+  .details h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the meta information */
+  .meta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the meta information spans */
+  .meta span {
+    margin-right: 15px;
+  }
+  
+  /* Style for the paragraph */
+  .details p {
+    line-height: 1.5;
+  }
+  
+  /* Add any additional styling as needed */
+  

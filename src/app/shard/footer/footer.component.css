@@ -1,0 +1,51 @@
+.footer {
+  background-color: #063970;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.location,
+.phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.location mat-icon,
+.phone mat-icon {
+  margin-right: 10px;
+}
+
+.offices {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.office {
+  flex-basis: 45%;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 1px solid #fff; /* Adjust color and style as needed */
+  width: 100%;
+  margin: 20px 0;
+}

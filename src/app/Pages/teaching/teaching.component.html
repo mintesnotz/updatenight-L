@@ -1,0 +1,41 @@
+<!-- teaching.component.html -->
+<div class="intro-section">
+  <h1>Welcome to the Educational Content Page</h1>
+  <p>This page contains a collection of educational materials, including videos and PDFs. Explore the content below to enhance your learning experience.</p>
+</div>
+
+<div class="search-container">
+  <form [formGroup]="searchForm">
+    <input type="text" placeholder="Search" formControlName="searchQuery">
+  </form>
+</div>
+
+<div class="container">
+  <!-- Videos Section -->
+  <div class="video-section">
+    <div *ngFor="let video of filteredVideoData" class="video-card">
+      <h3>{{ video.title }}</h3>
+      <p>{{ video.description }}</p>
+      <iframe width="700" height="80" [src]="getSafeUrl(video.src)" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- PDFs Section -->
+  <div class="pdf-section">
+    <ng-container *ngFor="let chunk of chunkArray(filteredBooks, 3)">
+      <div class="pdf-row">
+        <div *ngFor="let book of chunk" class="pdf-card">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{ book.title }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{ book.description }}</p>
+              <a href="{{ book.path || '#' }}" target="_blank">Open PDF</a>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

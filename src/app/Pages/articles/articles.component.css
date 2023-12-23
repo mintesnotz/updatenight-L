@@ -1,0 +1,72 @@
+.page-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.sidebar {
+  width: 20%; /* Adjust the width as needed */
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+  color: #333;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 8px;
+  margin-bottom: 8px;
+  color: #555;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.sidebar-link:hover {
+  background-color: #ddd;
+}
+
+.article-container {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.page-title {
+  color: #333;
+}
+
+.selected-section {
+  margin-top: 20px;
+}
+
+.selected-section-title {
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+}
+
+.selected-section p {
+  margin-top: 10px;
+}
+
+/* Style for the horizontal rule (hr) */
+hr {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width on small screens */
+  }
+  
+  .sidebar + .sidebar {
+    margin-top: 20px; /* Add space between the sidebars on smaller screens */
+  }
+}

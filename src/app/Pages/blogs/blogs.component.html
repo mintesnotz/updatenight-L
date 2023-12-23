@@ -1,0 +1,41 @@
+<!-- blogs.component.html -->
+
+<div class="main-container">
+  <div class="content-container">
+    <div class="intro-section">
+      <h1>Welcome to the Educational Content Page</h1>
+      <p>This page contains a collection of educational materials, including videos and PDFs. Explore the content below to enhance your learning experience.</p>
+    </div>
+
+    <div class="search-container">
+      <div class="input-area">
+        <input type="text" placeholder="Search blogs" [(ngModel)]="searchQuery" (input)="filterCards()">
+        <button (click)="clearSearch()">Clear</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content-section">
+        <div class="card" *ngFor="let card of filteredCardData" (click)="showCardDetails(card)">
+          <img [src]="card.photo" alt="Card Image">
+          <div class="card-details">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Section on the Right -->
+  <div class="sidebar">
+    <h1>Additional Information</h1>
+    <hr>
+    <div *ngIf="selectedCard">
+      <img [src]="selectedCard.photo" alt="Selected Card Image">
+      <h2>{{ selectedCard.title }}</h2>
+      <p>{{ selectedCard.description }}</p>
+      <!-- Add more details as needed -->
+    </div>
+  </div>
+</div>

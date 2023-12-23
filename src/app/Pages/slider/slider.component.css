@@ -1,0 +1,19 @@
+
+.carousel-inner{
+    padding-top: 5px;
+    padding-left: 50px;
+
+    padding-right: 50px;
+
+    
+
+}
+.carousel-item:hover {
+    transform: scale(1.05); /* Adjust the scale factor as needed */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+  }
+  .carousel-item:hover p {
+    transform: scale(1.05); /* Adjust the scale factor as needed */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+  }
+  /* Import Bootstrap styles */
